@@ -386,7 +386,7 @@ export const ProfilePage: React.FC = () => {
     const fetchProfile = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/profile', {
+        const response = await axios.get('https://online-course-backend-c0mk.onrender.com/api/profile', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         // Response expected to be a plain object with profile fields

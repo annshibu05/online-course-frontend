@@ -933,7 +933,7 @@ export const MyCourses: React.FC = () => {
   // Fetch courses from the backend
   const fetchCourses = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/courses', {
+      const response = await fetch('https://online-course-backend-c0mk.onrender.com/api/courses', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       const data = await response.json();
@@ -947,7 +947,7 @@ export const MyCourses: React.FC = () => {
 
     const handleAddCourse = async (courseData: any) => {
       try {
-        const response = await fetch('http://localhost:5000/api/courses', {
+        const response = await fetch('https://online-course-backend-c0mk.onrender.com/api/courses', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -973,7 +973,7 @@ export const MyCourses: React.FC = () => {
   // Edit an existing course
   const handleEditCourse = async (courseId: string, updatedData: any) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/courses/${courseId}`, {
+      const response = await fetch(`https://online-course-backend-c0mk.onrender.com/api/courses/${courseId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -1002,7 +1002,7 @@ export const MyCourses: React.FC = () => {
   // Delete a course
   const handleDeleteCourse = async (courseId: string) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/courses/${courseId}`, {
+      const response = await fetch(`https://online-course-backend-c0mk.onrender.com/api/courses/${courseId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
@@ -1019,7 +1019,7 @@ export const MyCourses: React.FC = () => {
 
   const handleUploadCertificate = async (courseId: string, certificateData: FormData) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/certificates/upload`, {
+      const response = await fetch(`https://online-course-backend-c0mk.onrender.com/api/certificates/upload`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -1058,7 +1058,7 @@ export const MyCourses: React.FC = () => {
 
   const handleDeleteCertificate = async (certificateId: string) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/certificates/${certificateId}`, {
+      const response = await fetch(`https://online-course-backend-c0mk.onrender.com/api/certificates/${certificateId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
@@ -1137,7 +1137,7 @@ export const MyCourses: React.FC = () => {
             {course.certificateLink ? (
               <div className="mt-4 space-y-2">
                 <a
-                  href={`http://localhost:5000/uploads/${course.certificateLink}`}
+                  href={`https://online-course-backend-c0mk.onrender.com/uploads/${course.certificateLink}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-600 hover:underline"

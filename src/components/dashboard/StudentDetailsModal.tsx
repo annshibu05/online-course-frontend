@@ -95,7 +95,7 @@ const StudentDetailsModal: React.FC<StudentDetailsModalProps> = ({ student, onCl
                             href={
                               cert.fileUrl.startsWith("http")
                                 ? cert.fileUrl
-                                : `http://localhost:5000/${cert.fileUrl.replace(/\\/g, "/")}`
+                                : `https://online-course-backend-c0mk.onrender.com/${cert.fileUrl.replace(/\\/g, "/")}`
                             }
                             target="_blank"
                             rel="noopener noreferrer"
