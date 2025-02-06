@@ -254,7 +254,7 @@ const StudentDashboard: React.FC = () => {
         setLoading(true);
         setError(null);
         // Use an absolute URL to ensure the request reaches the backend correctly.
-        const response = await axios.get("http://localhost:5000/api/student/stats", {
+        const response = await axios.get("https://online-course-backend-c0mk.onrender.com/api/student/stats", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
