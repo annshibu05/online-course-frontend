@@ -29,7 +29,7 @@
 import axios from "axios";
 
 // Base URL for API
-const API_BASE_URL = "https://online-course-frontend.onrender.com/api/auth"; // Update if different
+const API_BASE_URL = "http://localhost:5000/api/auth"; // Update if different
 
 // Validate email based on the role
 export const validateEmail = (email: string, role: "student" | "faculty"): boolean => {
