@@ -947,7 +947,7 @@ export const MyCourses: React.FC = () => {
 
     const handleAddCourse = async (courseData: any) => {
       try {
-        const response = await fetch('http://localhost:5000/api/courses', {
+        const response = await fetch('https://online-course-backend-c0mk.onrender.com/api/courses', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
