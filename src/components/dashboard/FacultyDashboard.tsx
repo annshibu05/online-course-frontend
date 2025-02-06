@@ -1178,7 +1178,7 @@ export const FacultyDashboard: React.FC = () => {
   useEffect(() => {
     const fetchStudentsData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/faculty/students-data", {
+        const response = await axios.get("https://online-course-backend-c0mk.onrender.com/api/faculty/students-data", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
