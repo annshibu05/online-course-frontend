@@ -185,7 +185,7 @@ export const AddCourseForm: React.FC<AddCourseFormProps> = ({ onClose, onCourseA
 
       // Send a POST request to the backend to add the course
       const response = await axios.post(
-        'http://localhost:5000/api/courses',
+        'https://online-course-backend-c0mk.onrender.com/api/courses',
         {
           title: formData.name,
           platform: formData.platform,
